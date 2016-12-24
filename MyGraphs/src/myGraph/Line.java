@@ -6,13 +6,14 @@
 package myGraph;
 
 import java.awt.*;
+import java.io.Serializable;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author yao
  */
-public class Line extends MyShape{
+public class Line extends MyShape implements Serializable{
     private final int coordinate[];
     private final int coordinate1[];
     

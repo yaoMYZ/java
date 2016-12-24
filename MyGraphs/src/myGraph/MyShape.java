@@ -1,6 +1,7 @@
 package myGraph;
 import java.awt.*;
-public abstract class MyShape
+import java.io.Serializable;
+public abstract class MyShape implements Serializable
 {
     public abstract double get_area();
     public abstract double get_length();

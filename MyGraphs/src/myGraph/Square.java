@@ -6,12 +6,13 @@
 package myGraph;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.io.Serializable;
 import javax.swing.JOptionPane;
 /**
  *
  * @author yao
  */
-public class Square extends MyShape {
+public class Square extends MyShape implements Serializable{
     private double width;
     private double height;
     
@@ -19,7 +20,7 @@ public class Square extends MyShape {
 
     @Override
     public String toShortString() {
-           return "S"+Integer.toString(coordinate[0])+","+Integer.toString(coordinate[1])+","+Double.toString(width)+Double.toString(height);
+           return "S,"+Integer.toString(coordinate[0])+","+Integer.toString(coordinate[1])+","+Double.toString(width)+","+Double.toString(height);
     }
 
     @Override

@@ -7,6 +7,7 @@ package myGraph;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.io.Serializable;
 import javax.swing.JOptionPane;
 
 
@@ -15,7 +16,7 @@ import javax.swing.JOptionPane;
  *
  * @author yao
  */
-public class Triangle extends MyShape{
+public class Triangle extends MyShape implements Serializable{
     private double firstEdge;
     private double secondEdge;
     private double thirdEdge;
@@ -31,7 +32,7 @@ public class Triangle extends MyShape{
 
     @Override
     public String toShortString() {
-        return "T"+Integer.toString(coordinate[0])+","+Integer.toString(coordinate[1])+","+Double.toString(firstEdge)+","+Double.toString(secondEdge)
+        return "Tr,"+Integer.toString(coordinate[0])+","+Integer.toString(coordinate[1])+","+Double.toString(firstEdge)+","+Double.toString(secondEdge)
                 +","+Double.toString(thirdEdge);
    }
 

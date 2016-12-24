@@ -1,11 +1,9 @@
 import myUI.GtypePanel;
 import java.awt.BorderLayout;
-import java.awt.Dimension;
+import java.awt.Container;
 import java.awt.Graphics;
-import java.awt.Toolkit;
+import java.awt.MenuBar;
 import myGraph.*;
-import myUI.*;
-import java.util.*;
 import javax.swing.*;
 public class TestGraphs 
 {
@@ -14,10 +12,10 @@ public class TestGraphs
     {
        {
         //set screan size
-        setBounds(100,100,600,500);
-        
+        setBounds(100,100,1000,600);
+        Container container=getContentPane();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        getContentPane().add(new JPanel()
+        container.add(new JPanel()
         {  
             @Override
             public void paintComponent(Graphics g)
@@ -26,8 +24,13 @@ public class TestGraphs
           test.displayAll(g);
           }
         });
-        getContentPane().add(new GtypePanel(test),BorderLayout.NORTH);
-        }
+        container.add(new GtypePanel(test),BorderLayout.NORTH);
+        //菜单栏
+        JMenuBar menuBar=new JMenuBar();
+        menuBar.add(new JMenu("File"));
+        menuBar.add(new JMenu("Edit"));
+        this.setJMenuBar(menuBar);
+       }
 
     };    
     public static void main(String[] args)

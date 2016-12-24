@@ -69,7 +69,7 @@ public class Circle extends MyShape implements java.io.Serializable
     }
     public String toShortString()
     {
-        return "C"+r+","+p1.x+","+p1.y;
+        return "C,"+p1.x+","+p1.y+","+r;
     }
    int getByteCount(){int len=3*4+1*4+1;return len;}
    byte getTypeCode(){return (byte)1;}//type means circle =1

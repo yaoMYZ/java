@@ -7,13 +7,14 @@ package myGraph;
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.io.Serializable;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author yao
  */
-public class Text extends MyShape{
+public class Text extends MyShape implements Serializable{
     private final int coordinate[];
     private final String str;
 
@@ -52,6 +53,10 @@ public class Text extends MyShape{
         return "Text:"+str+" at ("+Integer.toString(coordinate[0])+","+Integer.toString(coordinate[1])+") ";
     }
 
+    @Override
+    public String toShortString() {
+        return "T,"+Integer.toString(coordinate[0])+","+Integer.toString(coordinate[1])+","+str;   
+    }
     
     @Override
     public double get_length() {
@@ -73,10 +78,7 @@ public class Text extends MyShape{
      *
      * @return
      */
-    @Override
-    public String toShortString() {
-        return str+","+Integer.toString(coordinate[0])+","+Integer.toString(coordinate[1]);   
-    }
+    
 
     @Override
     public byte[] toBytesI() {
