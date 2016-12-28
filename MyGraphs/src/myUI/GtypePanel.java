@@ -371,6 +371,7 @@ public class GtypePanel extends JToolBar {
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(GtypePanel.class.getName()).log(Level.SEVERE, null, ex);
         }
+        jComt.updateUI();
 //        try {
 //            t.xx.addAll(fio.loadToFile());
 //        } catch (IOException ex) {

@@ -74,7 +74,7 @@ public class GraphicFrame extends javax.swing.JFrame {
         jMenu1.setText("File");
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem1.setText("Save_text1");
+        jMenuItem1.setText("SaveToFile");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -83,7 +83,7 @@ public class GraphicFrame extends javax.swing.JFrame {
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem2.setText("Save_text2");
+        jMenuItem2.setText("SaveFile");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
@@ -93,7 +93,7 @@ public class GraphicFrame extends javax.swing.JFrame {
         jMenu1.add(jSeparator1);
 
         jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem3.setText("Load_text1");
+        jMenuItem3.setText("LoadToFile");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);
@@ -102,7 +102,7 @@ public class GraphicFrame extends javax.swing.JFrame {
         jMenu1.add(jMenuItem3);
 
         jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem4.setText("Laod_text2");
+        jMenuItem4.setText("LaodFile");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
@@ -227,22 +227,26 @@ public class GraphicFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         FileIO fio=new FileIO(test);
         try {
-            fio.loadToFile();
+            test.xx.addAll(fio.loadToFile());
         } catch (Exception ex) {
             Logger.getLogger(GraphicFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
+        gtypePanel1.jComt.updateUI();
+        getRootPane().getParent().repaint();
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
         FileIO fio=new FileIO(test);
         try {
-            fio.loadFile();
+            test.xx.addAll(fio.loadFile());
         } catch (IOException ex) {
             Logger.getLogger(GraphicFrame.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(GraphicFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
+        gtypePanel1.jComt.updateUI();
+        getRootPane().getParent().repaint();
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
