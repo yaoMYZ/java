@@ -48,6 +48,7 @@ public class GraphicFrame extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
+        jMenuItem12 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
@@ -115,6 +116,15 @@ public class GraphicFrame extends javax.swing.JFrame {
         jMenu2.setText("Edit");
 
         jMenu3.setText("AddGraph");
+
+        jMenuItem12.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem12.setText("MouseAddCircle");
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem12);
 
         jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem5.setText("Triangle");
@@ -319,6 +329,16 @@ public class GraphicFrame extends javax.swing.JFrame {
         getRootPane().getParent().repaint();
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+        // TODO add your handling code here:
+        MyShape mc = MouseAddJDialog.getCircle((java.awt.Frame) (getRootPane().getParent()));
+        if (mc != null) {
+            test.add(mc);
+            gtypePanel1.jComt.updateUI();
+            getRootPane().getParent().repaint();
+        }
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
+
     static Graphs test=new Graphs();
     
     public static void main(String args[]) {
@@ -363,6 +383,7 @@ public class GraphicFrame extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
+    private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;

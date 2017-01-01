@@ -73,25 +73,11 @@ public class Circle extends MyShape implements java.io.Serializable
     }
    int getByteCount(){int len=3*4+1*4+1;return len;}
    byte getTypeCode(){return (byte)1;}//type means circle =1
-   public byte[] toBytesI()
-    {
-        byte[] res=null;
-        
-        ByteArrayOutputStream out=new ByteArrayOutputStream();
-        DataOutputStream sout=new DataOutputStream(out);
-        try{
-        sout.writeInt(getByteCount());
-        sout.writeByte(getTypeCode());
-        sout.writeInt(r);
-        sout.writeInt(p1.x);
-        sout.writeInt(p1.y);
-        res=out.toByteArray();
-        sout.close();
-        }catch(IOException e){}                
-        return res;
-    }
    public void paint(Graphics g)
    {
        g.drawOval(p1.x-r, p1.y-r,2*r, 2*r);
+   }
+   public void setR(int radius){
+       this.r=radius;
    }
 }

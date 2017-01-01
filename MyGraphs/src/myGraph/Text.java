@@ -74,15 +74,5 @@ public class Text extends MyShape implements Serializable{
         g2D.drawString(str, coordinate[0], coordinate[1]);
     }
 
-    /**
-     *
-     * @return
-     */
-    
-
-    @Override
-    public byte[] toBytesI() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
 }

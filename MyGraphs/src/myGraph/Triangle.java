@@ -155,10 +155,6 @@ public class Triangle extends MyShape implements Serializable{
         return newCoordianteArray;
     }
 
-    @Override
-    public byte[] toBytesI() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     public double getE1(){
         return firstEdge;

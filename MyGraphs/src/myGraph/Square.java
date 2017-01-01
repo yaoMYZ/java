@@ -87,10 +87,6 @@ public class Square extends MyShape implements Serializable{
         return "Square at"+"("+Integer.toString(coordinate[0])+","+Integer.toString(coordinate[1])+"),width="+Double.toString(width)+",height="+Double.toString(height);
     }
 
-    @Override
-    public byte[] toBytesI() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
 
 

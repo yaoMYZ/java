@@ -83,10 +83,6 @@ public class Line extends MyShape implements Serializable{
     public int []getCoordiante2(){
         return coordinate1;
     }
-    @Override
-    public byte[] toBytesI() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     
     

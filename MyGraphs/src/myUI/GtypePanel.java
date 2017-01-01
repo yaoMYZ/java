@@ -52,7 +52,7 @@ public class GtypePanel extends JToolBar {
 
         buttonGroup1.add(jToggleButton1);
         jToggleButton1.setSelected(true);
-        jToggleButton1.setText("No");
+        jToggleButton1.setText("MouseAdd");
         jToggleButton1.setFocusable(false);
         jToggleButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jToggleButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -229,7 +229,12 @@ public class GtypePanel extends JToolBar {
         // TODO add your handling code here:
         switch (contype) {
             case 0:
-                JOptionPane.showMessageDialog(getParent(), "No shape type setted");
+                MyShape mc=MouseAddJDialog.getCircle((java.awt.Frame) (getRootPane().getParent()));
+                if(mc!=null){
+                    t.add(mc);
+                    jComt.updateUI();
+                    getRootPane().getParent().repaint();
+                }
                 break;
             case 1:
                 MyShape c = CircleDlg.getCircle((java.awt.Frame) (getRootPane().getParent()));
